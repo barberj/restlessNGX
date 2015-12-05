@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Services</title>
+  <style type="text/css">
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+    h1 {
+      font-size: 25px;
+    }
+    a.member {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      margin: 0 5px 5px 0;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      background-size: cover;
+    }
+    a.member > .login {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+      background-color: rgba(0,0,0,0.7);
+      padding: 3px 0 5px 0;
+      overflow: hidden;
+      font-size: 14px;
+      color: #fff;
+      white-space: nowrap;
+      display: none;
+    }
+    a.member:hover > .login {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<h1>Services</h1>
+{% for service, _ in pairs(services) do %}
+  <span class="login">{{service}}</span>
+  <br />
+{% end %}
+</body>
+</html>
